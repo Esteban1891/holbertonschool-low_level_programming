@@ -1,49 +1,35 @@
 #include "holberton.h"
-
 /**
- * print_number -  Entry point
- * @n: Entry variable
+ * print_number - prints a number
+ * @n: Input number
  */
+
 void print_number(int n)
 {
-char e1, e2, e3, e4;
-unsigned int num;
-if (n >= 0 && n <= 9)
+long len, res, i, temp, expo;
+
+res = n;
+expo = len =  1;
+if (res < 0)
 {
-e1 = n;
-_putchar(e1 + '0');
+res *= -1;
+_putchar('-');
 }
-if (n >=  10 && n <= 99)
+
+temp = res;
+while (temp >= 10)
 {
-e1 = n / 10;
-e2 = n % 10;
-_putchar(e1 + '0'), _putchar(e2 + '0');
+len++;
+temp /= 10;
 }
-if (n >= 100 && n <= 999)
+
+for (i = 1; i < len; i++)
+expo *= 10;
+
+while (expo > 1)
 {
-e1 = n / 100;
-e2 = (n / 10) % 10;
-e3 = n % 10;
-_putchar(e1 + '0');
-_putchar(e2 + '0');
-_putchar(e3 + '0');
+_putchar((res / expo) % 10 + '0');
+expo /= 10;
 }
-if (n >= 1000 && n <= 9999)
-{
-e1 = n / 1000;
-e2 = (n / 100) % 10;
-e3 = (n % 100) / 10;
-e4 = n % 10;
-_putchar(e1 + '0');
-_putchar(e2 + '0');
-_putchar(e3 + '0');
-_putchar(e4 + '0');
-}
-if (n <= -10 && n >= -99)
-{
-num = n * (-1);
-e1 = num / 10;
-e2 = num % 10;
-_putchar('-'), _putchar(e1 + '0'), _putchar(e2 + '0');
-}
+_putchar(res % 10 + '0');
 }

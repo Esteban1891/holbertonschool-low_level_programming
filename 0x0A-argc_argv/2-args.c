@@ -9,7 +9,7 @@
  * @argv: pointer to pointers array
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	while (argc--)
 	{

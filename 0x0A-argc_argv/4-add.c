@@ -1,32 +1,54 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include "holberton.h"
 
 /**
- * main - adds positive numbers
- * @argc: argument count
- * @argv: argument vector
+ * main - Add positive numbers
+ * @argc: The number of command line arguments
+ * @argv: The command line arguments
  *
- * Return: 1 if one of the numbers contains symbols that are not digits,
- * otherwise return 0
+ * Return: 0 if successful, 1 if any arguments are not positive numbers
  */
-
 int main(int argc, char *argv[])
 {
-	int a, b, addition = 0;
+	int i;
+	unsigned int sum;
 
-	for (a = 1; a < argc; a++)
+	sum = 0;
+	for (i = 1; i < argc; i++)
 	{
-		for (b = 0; argv[b][b] != '\0'; b++)
+		if (is_positive_number(argv[i]))
 		{
-			if (!isdigit(argv[a][b]))
-			{
-				printf("Error\n");
-				return (1);
-			}
+			sum += atoi(argv[i]);
 		}
-		addition += atoi(argv[a]);
+		else
+		{
+			printf("Error\n");
+			return (1);
+		}
 	}
-	printf("%d\n", addition);
+
+	printf("%u\n", sum);
+
 	return (0);
+}
+
+/**
+ * is_positive_number - Check if a string contains only digits
+ * @number: The string to check
+ *
+ * Return: 1 if string contains only digits, 0 otherwise
+ */
+int is_positive_number(char *number)
+{
+	int i;
+
+	for (i = 0; number[i] != '\0'; i++)
+	{
+		if (!isdigit(number[i]))
+			return (0);
+	}
+
+	return (1);
 }

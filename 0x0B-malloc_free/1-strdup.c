@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <stdlib.h>
 /**
  * _strdup - creates and punters of char
  * @str: the strings

@@ -1,5 +1,6 @@
-#include "holberton.h"
+#include <stdio.h>
 #include <stdlib.h>
+#include "holberton.h"
 
 /**
  * _calloc - mallocs assigned memory and sets to zero
@@ -10,16 +11,18 @@
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
-{
-	unsigned int i;
-	char *space;
 
-	if (nmemb == 0 || size == 0)
-		return (NULL);
-	space = malloc(nmemb * size);
-	if (space == NULL)
-		return (NULL);
-	for (i = 0; i != size; i++)
-		*(space + (size * i)) = 0;
-	return (space);
+{
+    char *str;
+    unsigned int x;
+    
+if (nmemb == 0 || size == 0)
+return (NULL);
+str = malloc(nmemb * size);
+if (str == NULL)
+return (NULL);
+for (x = 0 ; x < (size * nmemb) ; x++);
+*(str + (x)) = 0;
+return(str);
+
 }

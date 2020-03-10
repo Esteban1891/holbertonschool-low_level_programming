@@ -1,18 +1,35 @@
-#include <stdlib.h>
 #include "dog.h"
+#include <stdlib.h>
 
 /**
- * free_dog - frees the memory allocated to dog struct
- * @d: pointer to dog_t
- *
- * Return: void
+ * new_dog - entry point
+ * @name: string from main, name of pet
+ * @age: number from main, age of pet
+ * @owner: string from main, owner of pet
+ * Return: p
  */
-
-void free_dog(dog_t *d)
+dog_t *new_dog(char *name, float age, char *owner)
 {
-	if (d == NULL)
-		return;
-	free(d->name);
-	free(d->owner);
-	free(d);
+	dog_t *p;
+	/* reserving memory to struct*/
+	p = malloc(sizeof(dog_t));
+	if (p == NULL)
+		return (NULL);
+	/* Cpunting name pointer*/
+	if (name == NULL)
+	{
+		free(p);
+		free(owner);
+		return (NULL);
+	}
+	if (owner == NULL)
+	{
+		free(p);
+		free(name);
+		return (NULL);
+	}
+	p->name = name;
+	p->age = age;
+	p->owner = owner;
+	return (p);
 }

@@ -1,4 +1,4 @@
- #include "dog.h"
+#include "dog.h"
 /**
  * *_strcpy - copy string
  * @dest: char to test

@@ -2,34 +2,15 @@
 #include <stdlib.h>
 
 /**
- * new_dog - entry point
- * @name: string from main, name of pet
- * @age: number from main, age of pet
- * @owner: string from main, owner of pet
- * Return: p
+ * free_dog -entry point
+ * @d: entry structure with pointer
  */
-dog_t *new_dog(char *name, float age, char *owner)
+void free_dog(dog_t *d)
 {
-	dog_t *p;
-	/* reserving memory to struct*/
-	p = malloc(sizeof(dog_t));
-	if (p == NULL)
-		return (NULL);
-	/* Cpunting name pointer*/
-	if (name == NULL)
+	if (d != NULL)
 	{
-		free(p);
-		free(owner);
-		return (NULL);
+		free(d->name);
+		free(d->owner);
+		free(d);
 	}
-	if (owner == NULL)
-	{
-		free(p);
-		free(name);
-		return (NULL);
-	}
-	p->name = name;
-	p->age = age;
-	p->owner = owner;
-	return (p);
 }

@@ -1,83 +1,35 @@
-#include <stdlib.h>
 #include "dog.h"
+#include <stdlib.h>
 
 /**
- * _strcpy - copies a string
- * @src: pointer to source string
- * @dest: pointer to copy of src string
- *
- * Return: pointer to copy of src string
+ * new_dog - entry point
+ * @name: string from main, name of pet
+ * @age: number from main, age of pet
+ * @owner: string from main, owner of pet
+ * Return: p
  */
-
-char *_strcpy(char *dest, char *src)
-{
-	int i = 0;
-
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-/**
- * _strlen - returns the length of a string
- * @s: pointer to string
- *
- * Return: length of s (without \0)
- */
-
-unsigned int _strlen(char *s)
-{
-	unsigned int count = 0;
-
-	while (*s)
-	{
-		count++;
-		s++;
-	}
-	return (count);
-}
-
-/**
- * new_dog - creates a new dog
- * @name: string
- * @age: float
- * @owner: string
- *
- * Return: pointer to new dog
- */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *lully;
-	char *name_copy, *owner_copy;
-
-	lully = malloc(sizeof(dog_t));
-	if (lully == NULL)
+	dog_t *p;
+	/* reserving memory to struct*/
+	p = malloc(sizeof(dog_t));
+	if (p == NULL)
 		return (NULL);
-
-	name_copy = malloc(sizeof(char) * _strlen(name) + 1);
-	if (name_copy == NULL)
+	/* Cpunting name pointer*/
+	if (name == NULL)
 	{
-		free(lully);
+		free(p);
+		free(owner);
 		return (NULL);
 	}
-	_strcpy(name_copy, name);
-
-	owner_copy = malloc(sizeof(char) * _strlen(owner) + 1);
-	if (owner_copy == NULL)
+	if (owner == NULL)
 	{
-		free(lully);
-		free(name_copy);
+		free(p);
+		free(name);
 		return (NULL);
 	}
-	_strcpy(owner_copy, owner);
-
-	lully->name = name_copy;
-	lully->age = age;
-	lully->owner = owner_copy;
-	return (lully);
+	p->name = name;
+	p->age = age;
+	p->owner = owner;
+	return (p);
 }

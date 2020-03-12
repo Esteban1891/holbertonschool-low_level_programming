@@ -1,11 +1,12 @@
 #include "3-calc.h"
-#include <stddef.h>
+#include <string.h>
 
 /**
- * get_op_func - Test
- * @s: String to compare
- * Return: Pointer to function
- **/
+ * get_op_func - selects the correct operation toperform
+ * @s: operation to perform
+ *
+ * Return: pointer to the correct function
+ */
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -21,12 +22,9 @@ int (*get_op_func(char *s))(int, int)
 	i = 0;
 	while (ops[i].op != NULL)
 	{
-		if (!strcmp(ops[i].op, s))
-			return (ops[i].f);
-
+		if (strcmp(s, ops[i].op) == 0)
+			break;
 		i++;
 	}
-
-
-	return (NULL);
+	return (ops[i].f);
 }

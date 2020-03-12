@@ -1,41 +1,49 @@
-#include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
-
-
-/**
- * error - Print the error
- * @status: Number to exit
- **/
-void error(int status)
-{
-	printf("Error\n");
-	exit(status);
-}
-
+#include <stdio.h>
 
 /**
- * main - Entry point
- * @aux: Size of argv
- * @argv: Arguments
- * Return: 0
- **/
-int main(int aux, char **argv)
+ * print_opcodes - print the opcodes of this program
+ * @a: address of the main function
+ * @n: number of bytes to print
+ *
+ * Return: void
+ */
+void print_opcodes(char *a, int n)
 {
-
 	int i;
 
-	if (aux != 2)
-		error(1);
+	for (i = 0; i < n; i++)
+	{
+		printf("%.2hhx", a[i]);
+		if (i < n - 1)
+			printf(" ");
+	}
+	printf("\n");
 
-	aux = atoi(argv[1]);
-	if (aux < 0)
-		error(2);
+}
 
-	unsigned char *bytes = (unsigned char *) main;
+/**
+ * main - prints the opcodes of its own main function
+ * @argc: number of arguments passed to the function
+ * @argv: array of pointers to arguments
+ *
+ * Return: always O
+ */
+int main(int argc, char **argv)
+{
+	int n;
 
-	for (i = 0; i < aux; i++)
-		printf("%x%c", bytes[i], (i < aux - 1) ? ' ' : '\n');
-
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+	n = atoi(argv[1]);
+	if (n < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+	print_opcodes((char *)&main, n);
 	return (0);
 }

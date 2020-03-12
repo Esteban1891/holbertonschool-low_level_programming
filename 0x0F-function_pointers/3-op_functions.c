@@ -1,45 +1,47 @@
 #include "3-calc.h"
 
 /**
- * op_add - ad
- * @a: f
- * @b: se
- * Return: addition
- */
+ * op_add - Add to numbers
+ * @a: Number 1
+ * @b: Number 2
+ * Return: Sum
+ **/
 int op_add(int a, int b)
 {
 	return (a + b);
 }
 
+
 /**
- * op_sub - subtracts b from a
- * @a: f
- * @b: se
- * Return: subctraction
- */
+ * op_sub - Substract to numbers
+ * @a: Number 1
+ * @b: Number 2
+ * Return: Rest two numbers
+ **/
 int op_sub(int a, int b)
 {
 	return (a - b);
 }
 
+
 /**
- * op_mul - multiplies a and b
- * @a: f
- * @b: s
- *
- * Return: multiplication
- */
+ * op_mul - Multiply to numbers
+ * @a: Number 1
+ * @b: Number 2
+ * Return: The result of multiply a with b
+ **/
 int op_mul(int a, int b)
 {
 	return (a * b);
 }
 
+
 /**
- * op_div - div
- * @a: first
- * @b: s
- * Return: division
- */
+ * op_div - Divide to numbers
+ * @a: Number 1
+ * @b: Number 2
+ * Return: Division
+ **/
 int op_div(int a, int b)
 {
 	if (b == 0)
@@ -47,15 +49,17 @@ int op_div(int a, int b)
 		printf("Error\n");
 		exit(100);
 	}
+
 	return (a / b);
 }
 
+
 /**
- * op_mod - mod
- * @a: fi
- * @b: se
- * Return: mod
- */
+ * op_mod - Modulo
+ * @a: Number 1
+ * @b: Number 2
+ * Return: Modulo
+ **/
 int op_mod(int a, int b)
 {
 	if (b == 0)
@@ -63,5 +67,6 @@ int op_mod(int a, int b)
 		printf("Error\n");
 		exit(100);
 	}
+
 	return (a % b);
 }

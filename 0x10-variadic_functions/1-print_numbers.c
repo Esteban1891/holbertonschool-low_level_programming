@@ -8,13 +8,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int count;
 
-	va_list list;
+	va_list mylist;
 
-	va_start(list, n);
+	va_start(mylist, n);
 
-	for (count = 0; count < n; i++)
+	for (count = 0; count < n; count++)
 	{
-		printf("%d", va_arg(list, int));
+		printf("%d", va_arg(mylist, int));
 
 		if (count == (n - 1))
 		{
@@ -27,5 +27,5 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	}
 	printf("\n");
 
-	va_end(list);
+	va_end(mylist);
 }

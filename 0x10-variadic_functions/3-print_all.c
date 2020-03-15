@@ -30,7 +30,7 @@ void print_all(const char * const format, ...)
 			break;
 		case 'f':
 			printf("%f", (float) va_arg(arguments, double));
-			break;
+   			break;
 		case 's':
 			tempstring = va_arg(arguments, char*);
 			if (tempstring != NULL)
@@ -47,4 +47,3 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	printf("\n");
-}

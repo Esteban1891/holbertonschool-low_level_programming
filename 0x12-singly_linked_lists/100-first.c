@@ -4,10 +4,10 @@
 void __attribute__((constructor)) hare(void);
 
 /**
- *print_hare - prints a hare before the main
+ *print_esteban - prints a hare before the main
  */
 
-void hare(void)
+void print_esteban(void)
 {
 	printf("You're beat! and yet, you must allow,\n"
 	       "I bore my house upon my back!\n");

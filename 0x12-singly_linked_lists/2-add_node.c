@@ -10,31 +10,32 @@
  * Return: If the function fails - NULL.
  *         Otherwise - the address of the new element.
  */
+#include "lists.h"
+
+/**
+ * add_node -  adds a new node at the beginning of a list_t list.
+ * @head: address to be added of str
+ * @str: string to be added
+ * Return: head
+ */
+
 list_t *add_node(list_t **head, const char *str)
 {
-	char *dup;
-	int len;
-	list_t *new;
+	list_t *node;
+	int leng = 0;
 
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
+	node = malloc(sizeof(list_t));/*assigning the value*/
+	if (node == NULL)
 		return (NULL);
 
-	dup = strdup(str);
-	if (dup == NULL)
-	{
-		free(new);
-		return (NULL);
-	}
+	node->str = strdup(str);/*copies n bytes of str*/
 
-	for (len = 0; str[len];)
-		len++;
+	while (str[leng])/*loop the string*/
+		leng++;/*increase*/
 
-	new->str = dup;
-	new->len = len;
-	new->next = *head;
+	node->len = leng;/*add the leng of str*/
+	node->next = *head;/*add address of Double Pointer*/
+	*head = node;
 
-	*head = new;
-
-	return (new);
+	return (*head);
 }

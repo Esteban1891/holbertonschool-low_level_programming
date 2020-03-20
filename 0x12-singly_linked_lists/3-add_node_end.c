@@ -1,48 +1,43 @@
 #include "lists.h"
-#include <string.h>
 
 /**
- * add_node_end - Adds a new node at the end
- *                of a list_t list.
- * @head: A pointer the head of the list_t list.
- * @str: The string to be added to the list_t list.
- *
- * Return: If the function fails - NULL.
- *         Otherwise - the address of the new element.
+ * add_node_end -  adds a new node at the end of a list_t list.
+ * @head: address to be added of str
+ * @str: string to be added
+ * Return: head
  */
+
 list_t *add_node_end(list_t **head, const char *str)
 {
-	char *dup;
-	int len;
-	list_t *new, *last;
+	list_t *node;
+	list_t *temp;
+	int leng = 0;
 
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
+	node = malloc(sizeof(list_t));
+	if (node == NULL)
 		return (NULL);
 
-	dup = strdup(str);
-	if (str == NULL)
+	node->str = strdup(str);
+
+	while (str[leng])
+		leng++;
+
+	temp = NULL;
+	node->len = leng;/* lenght of the str*/
+	node->next = NULL;
+
+	if (*head != NULL)
 	{
-		free(new);
-		return (NULL);
+		temp = *head;
+		while (temp->next != NULL)
+		{
+			temp = temp->next;
+		}
+		temp->next = node;
 	}
-
-	for (len = 0; str[len];)
-		len++;
-
-	new->str = dup;
-	new->len = len;
-	new->next = NULL;
-
-	if (*head == NULL)
-		*head = new;
-
 	else
 	{
-		last = *head;
-		while (last->next != NULL)
-			last = last->next;
-		last->next = new;
+		*head = node;
 	}
 
 	return (*head);

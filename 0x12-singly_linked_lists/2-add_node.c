@@ -10,14 +10,8 @@
  * Return: If the function fails - NULL.
  *         Otherwise - the address of the new element.
  */
-#include "lists.h"
 
-/**
- * add_node -  adds a new node at the beginning of a list_t list.
- * @head: address to be added of str
- * @str: string to be added
- * Return: head
- */
+
 
 list_t *add_node(list_t **head, const char *str)
 {

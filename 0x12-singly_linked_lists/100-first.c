@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-void print_msg(void) __attribute__ ((constructor));
+
+void __attribute__((constructor)) hare(void);
 
 /**
- *print_msg - prints a msg before the main
+ *print_hare - prints a hare before the main
  */
 
-void print_msg(void)
+void hare(void)
 {
 	printf("You're beat! and yet, you must allow,\n"
 	       "I bore my house upon my back!\n");

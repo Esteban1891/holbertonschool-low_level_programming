@@ -21,21 +21,29 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *node;
-	int leng = 0;
+	char *dup;
+	int len;
+	list_t *new;
 
-	node = malloc(sizeof(list_t));/*assigning the value*/
-	if (node == NULL)
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 		return (NULL);
 
-	node->str = strdup(str);/*copies n bytes of str*/
+	dup = strdup(str);
+	if (dup == NULL)
+	{
+		free(new);
+		return (NULL);
+	}
 
-	while (str[leng])/*loop the string*/
-		leng++;/*increase*/
+	for (len = 0; str[len];)
+		len++;
 
-	node->len = leng;/*add the leng of str*/
-	node->next = *head;/*add address of Double Pointer*/
-	*head = node;
+	new->str = dup;
+	new->len = len;
+	new->next = *head;
 
-	return (*head);
+	*head = new;
+
+	return (new);
 }

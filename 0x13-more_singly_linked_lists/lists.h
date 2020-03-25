@@ -18,6 +18,21 @@ typedef struct listint_s
 		    struct listint_s *next;
 } listint_t;
 
+
+/**
+ * struct listint_safe - singly 
+ * @addy: address this sister node
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ * 
+ */
+typedef struct listint_safe
+{
+	const listint_t *addy;
+	struct listint_safe *next;
+} listint_safe;
+
 size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
 listint_t *add_nodeint(listint_t **head, const int n);

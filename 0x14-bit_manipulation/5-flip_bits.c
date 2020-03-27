@@ -9,15 +9,14 @@ include "holberton.h"
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int size, num, i;
+	unsigned long int count = 0;
+	unsigned long int diff = n ^ m;
 
-	size = sizeof(n) * 8 - 1;
-	for (i = 0, num = 0; i <= size; i++)
+	while (diff)
 	{
-		if ((n & 1) != (m & 1))
-			num++;
-		n = n >> 1;
-		m = m >> 1;
+		count += (diff & 1);
+		diff >>= 1;
 	}
-	return (num);
+
+	return (count);
 }

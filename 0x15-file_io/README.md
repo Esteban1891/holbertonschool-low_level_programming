@@ -1,4 +1,4 @@
-<h1>0x14. C - File I/O</h1>
+<h1>0x15. C - File I/O</h1>
 <p><strong>What you should learn from this project</strong></p>
 <pre>
   <code>At the end of this project you are expected to be able to explain to anyone, without the help of Google:</code>
@@ -98,4 +98,4 @@
   <a class="anchor" href="https://github.com/Esteban1891/holbertonschool-low_level_programming/tree/master/0x15-file_io#Esteban-De-La-Hoz"></a>
 </h3>
 <h3>Esteban De La Hoz</h3>
-<p>Email:<a href="mailto:"esteban.delahoz15@gmail.com">esteban.delahoz
+<p>Email:<a href="mailto:"esteban.delahoz15@gmail.com">esteban

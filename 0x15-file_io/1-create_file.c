@@ -1,5 +1,4 @@
 #include "holberton.h"
-
 /**
  * create_file - create a file with the text content
  * @filename: name of the file to open
@@ -8,8 +7,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int fd, count = 0;
-        int number = 1;
+	int fd, number = 1, count = 0;
 
 	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 	if (fd == -1)

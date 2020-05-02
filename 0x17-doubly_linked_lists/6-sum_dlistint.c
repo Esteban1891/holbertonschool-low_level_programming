@@ -8,6 +8,7 @@ int sum_dlistint(dlistint_t *head)
 {
 	int sumatoria;
 
+
 	for (sumatoria = 0; head != NULL;)
 	{
 		sumatoria += head->n;

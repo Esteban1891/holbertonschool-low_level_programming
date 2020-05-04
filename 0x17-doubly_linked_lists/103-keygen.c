@@ -1,14 +1,81 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "lists.h"
 
+/**
+ * _strlen - returns the length of the string
+ * @s: takes string
+ *
+ * Return: returns the length int
+ */
+
+int _strlen(char *s)
+{
+	int count;
+
+	count = 0;
+	while (s[count])
+	{
+		count++;
+	}
+	return (count);
+}
+
+
+int f4(int len, char *argv)
+{
+	int i = 0, j = 0;
+
+	while (i < len)
+	{
+		if (argv[i] > j)
+			j = argv[i];
+		i++;
+	}
+	srand(j ^ 14);
+	i = rand();
+	return (i);
+}
+
+
+int f5(int len, char *argv)
+{
+	int i = 0;
+	long int j = 0;
+
+	while (i < len)
+	{
+		j += argv[i] * argv[i];
+		j = (int)j;
+		i++;
+	}
+	j = (j ^ 239) & 63;
+	return (j);
+}
+
+
+int f6(char *argv)
+{
+	int i = 0;
+	long int j = 0;
+
+	while (i < argv[0])
+	{
+		j = rand();
+		i++;
+	}
+	j = (j ^ 229) & 63;
+	return (j);
+
+}
 /**
  * main - Generates and prints passwords for the crackme5 executable.
  * @argc:
  * @argv:
  * Return: Always 0.
  */
-nt main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int i = 0;
 	long int st = 0;

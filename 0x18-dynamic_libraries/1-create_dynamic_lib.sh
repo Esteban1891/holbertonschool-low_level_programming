@@ -1,2 +1,4 @@
 #!/bin/bash
-gcc -g -fPIC -Wall -Werror -Wextra -pedantic *.c -shared -o libholberton.so
+gcc -c -Wall -Werror -Wextra -pedantic -fPIC *.c
+gcc -shared -o liball.so *.o
+rm *.o

@@ -1,22 +1,27 @@
 #include "holberton.h"
 
 /**
- * _strchr - locates a character in a string
- * @s: string to check
- * @c: character to check for
+ * _strchr - locates a character in a string.
+ * @s: pointer to array
+ * @c: char type
  *
- * Return: pointer to spot in s with c or null
+ * Return: arrayed at check
  */
+
 char *_strchr(char *s, char c)
 {
-	int i;
 
-	for (i = 0; *(s + i); i++)
-	{
-		if (*(s + i) == c)
-			return (s + i);
-	}
-	if (*(s + i) == c)
-		return (s + i);
-	return (0);
+while (*s != '\0')
+{
+	if (*s == c)
+	return (s);
+	s++;
+}
+if (c == '\0')
+{
+	return (s);
+}
+s = 0;
+return (s);
+
 }

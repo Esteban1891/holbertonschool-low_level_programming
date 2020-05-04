@@ -1,23 +1,27 @@
 #include "holberton.h"
 
 /**
- * _strcmp - compares two strings
- * @s1: string one to compare
- * @s2: string two to compare
- * Return: an integer less than 0 if s1 is found
+ *_strcmp -  compares two strings
+ *@s1: A pointer to an char that will be updated
+ *@s2: A pointer to an char that will be updated
+ *Return: dest
  */
+
 int _strcmp(char *s1, char *s2)
 {
-	int x;
+/* pointer declaration*/
+	char *p1 = s1;
+	char *p2 = s2;
 
-	for (x = 0; s1[x] != '\0'; x++)
-		;
-	for (x = 0; s2[x] != '\0'; x++)
-	{
-		if (s1[x] != s2[x])
-		{
-			return (s1[x] - s2[x]);
-		}
-	}
-	return (0);
+/* Loop While*/
+while (*p1 != '\0' && *p2 != '\0' && *p1 == *p2)
+{
+
+/* Pointer iteration*/
+p1++;
+p2++;
+
+}
+
+return (*p1 - *p2);
 }

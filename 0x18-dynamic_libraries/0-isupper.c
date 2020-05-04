@@ -1,15 +1,15 @@
 #include "holberton.h"
 
 /**
-* _isupper - tests whether a character is aowercase letter from the English.
-*@c: printf  'a' y 'c'.
-* Return: 1 if it is a lowercase letter, 0 if it is not a lowercase
-* letter.
-*/
+ * _isupper - checks for uppercase character.
+ * @c : int type uppercase.
+ * Return: A is : 1 or a is : 0.
+ */
 int _isupper(int c)
 {
-if (c >= 'A' && c <= 'Z')
+if
+(c > 64 && c < 91)
 return (1);
-else
+
 return (0);
 }

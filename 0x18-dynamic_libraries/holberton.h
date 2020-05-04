@@ -1,8 +1,11 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
+#define EXIT_SUCCESS 0
 #include <stdio.h>
 #include <stdlib.h>
+#include <strings.h>
 #include <unistd.h>
+
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);

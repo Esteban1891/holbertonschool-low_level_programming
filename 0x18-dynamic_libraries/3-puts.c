@@ -1,18 +1,16 @@
 #include "holberton.h"
 
 /**
- * _puts - print a string to stdout
- * @s: char array string type
- * Description: Can only use _putchar
+ * _puts - check the code for Holberton School students.
+ * @str: type char.
+ * Return: Always 0.
  */
-
-void _puts(char *s)
+void _puts(char *str)
 {
-	int estebantupapi;
-
-	for (estebantupapi = 0; s[estebantupapi] != '\0'; estebantupapi++)
-	{
-		_putchar(s[estebantupapi]);
-	}
+int a;
+for (a = 0; str[a] != '\0'; a++)
+{
+	_putchar(str[a]);
+}
 	_putchar('\n');
 }

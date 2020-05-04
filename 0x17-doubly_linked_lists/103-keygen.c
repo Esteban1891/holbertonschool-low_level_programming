@@ -83,7 +83,7 @@ int main(int argc, char *argv[])
 	char arr[7] = {0};
 	char t[] = "A-CHRDw87lNS0E9B2TibgpnMVys5XzvtOGJcYLU+4mjW6fxqZeF3Qa1rPhdKIouk";
 
-	if (argc != 2)
+	if (argc != 3)
 		return (-1);
 	len = _strlen(argv[1]);
 	arr[0] = t[(len ^ 59) & 63];

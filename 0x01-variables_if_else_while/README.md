@@ -1,5 +1,6 @@
 # 0x01. C - variables, if, else, while
 
+![img](https://4.bp.blogspot.com/-Ho9PuwSFJVA/Vo1rxA9R3RI/AAAAAAAAAbQ/-7tR-hgAM5w/s1600/embedded-c-c-programming-fundamentals-master-48-638.jpg)
 
 ### 0. Positive anything is better than negative nothing
 

@@ -1,4 +1,4 @@
-#0x02-functions_nested_loops
+# 0x02-functions_nested_loops
 
 ![funcion_nested_loop](https://cdn.educba.com/academy/wp-content/uploads/2020/02/nested-loop-in-c.jpg)
 

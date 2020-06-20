@@ -12,4 +12,5 @@ compiles a C file and creates an executable.
 prints a string using puts.
 ### 5-printf.c
 prints a string using printf.
-### 6-size.c	prints the size of various data types.
+### 6-size.c
+prints the size of various data types.

@@ -9,7 +9,7 @@ them and how to use them with `$LD_LIBRARY_PATH`, `nm`, `ldd`, and `ldconfig`.
 
 ## Tasks :page_with_curl:
 
-* **0. A library is not a luxury but one of the necessities of life**
+## 0. A library is not a luxury but one of the necessities of life
   * [libholberton.so](./libholberton.so): C dynamic library containing all the functions
   listed below:
     * `int _putchar(char c);`
@@ -36,11 +36,11 @@ them and how to use them with `$LD_LIBRARY_PATH`, `nm`, `ldd`, and `ldconfig`.
   * [holberton.h](./holberton.h): Header file containing the prototypes of all functions
   included in `libholberton.so`.
 
-* **1. Without libraries what have we? We have no past and no future**
+## 1. Without libraries what have we? We have no past and no future
   * [1-create_dynamic_lib.sh](./1-create_dynamic_lib.sh): Bash script that creates a
   dynamic library called `liball.so` from all the `.c` files in the current directory.
 
-* **2. Let's call C functions from Python**
+## 2. Let's call C functions from Python
   * [100-operations.so](./100-operations.so): C dynamic library containing basic C
   mathematical operation functions that can be called from Python.
   * Includes:
@@ -49,3 +49,8 @@ them and how to use them with `$LD_LIBRARY_PATH`, `nm`, `ldd`, and `ldconfig`.
     * `int mul(int a, int b);`
     * `int div(int a, int b);`
     * `int mod(int a, int b);`
+    
+    
+    ## Authors :black_nib:
+
+- [Esteban De La Hoz](https://www.linkedin.com/in/esteban-de-la-hoz-romero-b6270017b/) | [Twitter](https://twitter.com/Esteban18911) | [GitHub](https://github.com/Esteban18911)

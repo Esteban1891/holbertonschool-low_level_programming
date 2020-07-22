@@ -1,6 +1,7 @@
-# C - More malloc, free
+# C - malloc, free
 
-In this project, I learned about using `exit`, `calloc`, and `realloc` in C.
+In this project, I learned about the difference between automatic
+and dynamic location as well as how to use `malloc`, `free`, and `valgrind` in C.
 
 ## Tests :heavy_check_mark:
 
@@ -8,72 +9,71 @@ In this project, I learned about using `exit`, `calloc`, and `realloc` in C.
 
 ## Header File :file_folder:
 
-* [holberton.h](./holberton.h): Header file containing prototypes for all functions written in
-the project.
+* [holberton.h](./holberton.h): Header file containing prototypes for all functions written
+in the project.
 
-| File                 | Prototype                                                                  |
-| -------------------- | -------------------------------------------------------------------------- |
-| `0-malloc_checked.c` | `void *malloc_checked(unsigned int b);`                                    |
-| `1-string_nconcat.c` | `char *string_nconcat(char *s1, char *s2, unsigned int n);`                |
-| `2-calloc.c`         | `char *string_nconcat(char *s1, char *s2, unsigned int n);`                |
-| `3-array_range.c`    | `int *array_range(int min, int max);`                                      |
-| `100-realloc.c`      | `void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);` |
+| File               | Protoype                                         |
+| ------------------ | ------------------------------------------------ |
+| `0-create_array.c` | `char *create_array(unsigned int size, char c);` |
+| `1-strdup.c`       | `char *_strdup(char *str);`                      |
+| `2-str_concat.c`   | `char *str_concat(char *s1, char *s2);`          |
+| `3-alloc_grid.c`   | `int **alloc_grid(int width, int height);`       |
+| `4-free_grid.c`    | `void free_grid(int **grid, int height);`        |
+| `5-argstostr.c`    | `char *argstostr(int ac, char **av);`            |
+| `100-strtow.c`     | `char **strtow(char *str);`                      |
 
 ## Tasks :page_with_curl:
 
-## 0. Trust no one
-  * [0-malloc_checked.c](./0-malloc_checked.c): C function that returns a
-  pointer to a newly-allocated space in memory using `malloc`.
-    * If `malloc` fails, the function causes normal process termination with a status value
-    of `98`.
+## 0. Float like a butterfly, sting like a bee
+  * [0-create_array.c](./0-create_array.c): C function that returns a pointer to a
+  newly-allocated space in memory containing an array of characters.
+    * The array of characters is initialized to the parameter `c`.
+    * If the function fails or receives `size` equal to `0` - returns `NULL`.
 
-## 1. string_nconcat
-  * [1-string_nconcat.c](./1-string_nconcat.c): C function that returns a pointer to a
-  newly-allocated space in memory containing the concatenation of two strings.
-    * The returned pointer contains `s1` followed by the first `n` bytes
-    of `s2`, null-terminated.
-    * If `n` is greater than or equal to the length of `s2`, the entire string `s2` is used.
-    * If `NULL` is passed, the function treats the parameter as an empty string.
+## 1. The woman who has no imagination has no wings
+  * [1-strdup.c](./1-strdup.c): C function that returns a pointer to a newly-allocated space
+  in memory containing a copy of the string passed as parameter.
+    * Returns a pointer to a new string which is a duplicate of the string `str`.
+    * Memory for the new string is obtained with `malloc` and can be freed with `free`.
+    * If `str` is `NULL` or insufficient memory was available - returns `NULL`.
+
+## 2. He who is not courageous enough to take risks will accomplish nothing in life
+  * [2-str_concat.c](./2-str_concat.c): C function that returns a pointer to a
+  newly-allocated space in memory containing the concatenation of two strings passed as
+  parameters.
+    * The returned pointer contains the contents of `s1` followed by `s2` and is
+    null-terminated.
+    * The function treats `NULL` as an empty string.
     * If the function fails - returns `NULL`.
 
-## 2. _calloc
-  * [2-calloc.c](./2-calloc.c): C function that returns a pointer to a newly-allocated space
-  in memory for an array, using `malloc`.
-    * Allocates memory for an array of `nmemb` elements of `size` bytes each.
-    * The memory is set to zero.
-    * If `nmemb` = 0, `size` = `0`, or the function fail - returns `NULL`.
+* **3. If you even dream of beating me you'd better wake up and apologize**
+  * [3-alloc_grid.c](./3-alloc_grid.c): C function that returns a
+  pointer to a newly-allocated space in memory containing a two-dimensional array of integers.
+    * Each element of the two-dimensional array is initialized to `0`.
+    * If the function fails or either of `width` or `height` is
+    `0` or negative - returns `NULL`.
 
-## 3. array_range
-  * [3-array_range.c](./3-array_range.c): C function that returns a pointer to a
-  newly-allocated space in memory containing an array of integers.
-    * The array contains all the values from parameters `min` to `max`, inclusive,
-    ordered from `min` to `max`.
-    * If `min > max` or the function fails - returns `NULL`.
+## 4. It's not bragging if you can back it up
+  * [4-free_grid.c](./4-free_grid.c): C function that frees a two-dimensional array previsouly
+  created by the `alloc_grid` function defined in `3-alloc_grid.c`.
+    * The program does not crash upon receiving invalid two-dimensional arrays.
 
-## 4. _realloc
-  * [100-realloc.c](./100-realloc.c): C function that reallocates a memory block using
-  `malloc` and `free`.
-    * The parameter `ptr` is a pointer to the memory previously allocated with
-    a call to `malloc: malloc(old_size)`.
-    * The paramter `old_size` is the size, in bytes, of the allocated space for `ptr`.
-    * The paramter `new_size` is the new size, in bytes, of the new memory block.
-    * The contens of `ptr` are copied to the newly-allocated space in the range from the
-    start of `ptr` up to the minimum of `old_size` and `new_size`.
-    * If `new_size` > `old_size`, the "added" memory is not initialized.
-    * If `new_size` == `old_size`, the function returns `ptr`.
-    * If `ptr` is `NULL`, the call is equivalent to `malloc(new_size)` for all values of
-    `old_size` and `new_size`.
-    * If `new_size` = 0 and `ptr` is not `NULL`, the call is equivalent to
-    `free(ptr)` and the function returns `NULL`.
+## 5. It isn't the mountains ahead to climb that wear you out; it's the pebble in your shoe
+  * [5-argstostr.c](./5-argstostr.c): C function that returns a pointer to a
+  newly-allocated space in memory containing the concatenation of all the arguments of the
+  program.
+    * Each argument is followed by a `\n` in the new string.
+    * If `ac == 0`, `av == NULL`, or the function fails - returns `NULL`.
 
-## 5. We must accept finite disappointment, but never lose infinite hope
-  * [101-mul.c](./101-mul.c): C program that multiplies two positive numbers.
-    * Usage: `mul num1 num2`.
-    * The function assumes `num1` and `num2` are passed in base 10.
-    * Prints the result followed by a new line.
-    * If the number of arguments is incorrect or either of `num1` or `num2`
-    contains non-digits, the function prints `Error` followed by a new line and
-    exits with a status of `98`.
+## 6. I will show you how great I am
+  * [100-strtow.c](./100-strtow.c): C function that splits a string into words.
+    * Returns a pointer to a newly-allocated space in memory containing
+    an array of strings (words).
+    * Each element of the array of strings contains a single word, null-terminated.
+    * The last element of the returned array is `NULL`.
+    * Words are separated by spaces.
+    * If `str == NULL`, `str == ""`, or the function fails - returns `NULL`.
+
 
 ## Authors :black_nib:
 

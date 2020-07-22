@@ -40,9 +40,9 @@ working in the C language. The specific list of projects contained follows:
 * [0x18. C - Dynamic libraries](./0x17-dynamic_libraries)
 * [0x19. C - Stacks, Queues - LIFO, FIFO](https://github.com/Esteban1891/monty/tree/master)
 * [0x1A. C - Hash tables](./0x1A-hash_tables)
-* [0x1B. C - Sorting algorithms & Big O](./0x1B-sorting_algorithms)
+* [0x1B. C - Sorting algorithms & Big O](https://github.com/Esteban1891/sorting_algorithms)
 * [0x1C. C - Makefiles](./0x1C-makefiles)
-* [0x1D. C - Binary trees](https://github.com/Esteban1891/0x1D-binary_trees/tree/master)
+* [0x1D. C - Binary trees](https://github.com/Esteban1891/binary_trees)
 * [0x1E. C - Search Algorithms](./0x1E-search_algorithms)
 
 ## Acknowledgements :pray:

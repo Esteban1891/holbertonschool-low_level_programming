@@ -1,4 +1,4 @@
-# Low-Level Programming - Data Structures, Algorithms, Linux/Unix System Programming
+# Low-Level Programming - Data Structures, Algorithms, Linux/Unix System Programming :office:
 
 <p align="center">
   <img
@@ -44,10 +44,6 @@ working in the C language. The specific list of projects contained follows:
 * [0x1C. C - Binary trees](https://github.com/bdbaraban/0x1C-binary_trees/tree/master)
 * [0x1D. C - Search Algorithms](./0x1D-search_algorithms)
 
-## Authors :black_nib:
-
-- [Esteban De La Hoz](https://www.linkedin.com/in/esteban-de-la-hoz-romero-b6270017b/) | [Twitter](https://twitter.com/Esteban18911) | [GitHub](https://github.com/Esteban18911)
-
 ## Acknowledgements :pray:
 
 All work contained in this project was completed as part of the curriculum for
@@ -55,4 +51,10 @@ Holberton School. Holberton School is a campus-based full-stack software
 engineering program that prepares students for careers in the tech industry
 using project-based peer learning. For more information, visit
 [this link](https://www.holbertonschool.com/).
+
+## Authors :black_nib:
+
+- [Esteban De La Hoz](https://www.linkedin.com/in/esteban-de-la-hoz-romero-b6270017b/) | [Twitter](https://twitter.com/Esteban18911) | [GitHub](https://github.com/Esteban18911)
+
+
 

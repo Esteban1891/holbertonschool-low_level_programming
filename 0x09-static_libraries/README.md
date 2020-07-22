@@ -36,10 +36,6 @@ using them with `ar`, `ranlib`, and `nm`.
   * [holberton.h](./holberton.h): Header file containing the prototypes of all functions
   included in `libholberton.a`.
 
-## 1. Without libraries what have we? We have no past and no future
+* **1. Without libraries what have we? We have no past and no future**
   * [create_static_lib.sh](./create_static_lib.sh): Bash script that creates a static
   library called `liball.a` from all the `.c` files in the current directory.
-  
-  ## Authors :black_nib:
-
-- [Esteban De La Hoz](https://www.linkedin.com/in/esteban-de-la-hoz-romero-b6270017b/) | [Twitter](https://twitter.com/Esteban18911) | [GitHub](https://github.com/Esteban18911)

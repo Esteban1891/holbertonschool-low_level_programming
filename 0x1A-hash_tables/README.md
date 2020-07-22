@@ -1,47 +1,114 @@
-<p><audio class="audio-for-speech" src="http://www.unit-conversion.info/texttools/text-to-html/"></audio></p>
-<div class="translate-tooltip-mtz hidden">
-<div class="header">
-<div class="header-controls">&nbsp;</div>
-<div class="translate-icons">&nbsp;<img class="to" src="http://www.unit-conversion.info/texttools/text-to-html/" alt="" />
-<h1><a href="https://camo.githubusercontent.com/82231b15f5a92671047cf4a1b592c46482e1fe71/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746573742d37396435622e61707073706f742e636f6d2f6f2f632d70726f6772616d6d696e672e706e673f616c743d6d6564696126746f6b656e3d30353330363230342d333566662d343265342d383433382d366530383065303135366334" rel="noopener noreferrer" target="_blank"><img src="https://camo.githubusercontent.com/82231b15f5a92671047cf4a1b592c46482e1fe71/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746573742d37396435622e61707073706f742e636f6d2f6f2f632d70726f6772616d6d696e672e706e673f616c743d6d6564696126746f6b656e3d30353330363230342d333566662d343265342d383433382d366530383065303135366334" alt="logo" width="50" height="50" data-canonical-src="https://firebasestorage.googleapis.com/v0/b/test-79d5b.appspot.com/o/c-programming.png?alt=media&amp;token=05306204-35ff-42e4-8438-6e080e0156c4" /></a>&nbsp;0x1A. C - Hash tables</h1>
-<p><a href="https://camo.githubusercontent.com/b5f92a24ed8c1326eef18595ac07695675031211/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746573742d37396435622e61707073706f742e636f6d2f6f2f486173685f5461626c652e4a50473f616c743d6d6564696126746f6b656e3d38366438316263612d363837362d346332322d613163662d643437623463613831323239" rel="noopener noreferrer" target="_blank"><img src="https://camo.githubusercontent.com/b5f92a24ed8c1326eef18595ac07695675031211/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746573742d37396435622e61707073706f742e636f6d2f6f2f486173685f5461626c652e4a50473f616c743d6d6564696126746f6b656e3d38366438316263612d363837362d346332322d613163662d643437623463613831323239" alt="" data-canonical-src="https://firebasestorage.googleapis.com/v0/b/test-79d5b.appspot.com/o/Hash_Table.JPG?alt=media&amp;token=86d81bca-6876-4c22-a1cf-d47b4ca81229" /></a></p>
-<h2><a id="user-content-resources" class="anchor" href="https://github.com/josevallejo1984/holbertonschool-low_level_programming/tree/master/0x1A-hash_tables#resources"></a>Resources</h2>
-<h3><a id="user-content-read-or-watch" class="anchor" href="https://github.com/josevallejo1984/holbertonschool-low_level_programming/tree/master/0x1A-hash_tables#read-or-watch"></a>Read or watch:</h3>
-<ul>
-<li><a href="https://www.youtube.com/watch?v=MfhjkfocRR0" rel="nofollow">What is a HashTable Data Structure - Introduction to Hash Tables , Part 0</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Hash_function" rel="nofollow">Hash function</a></li>
-<li><a href="https://en.wikipedia.org/wiki/Hash_table" rel="nofollow">Hash table</a></li>
-<li><a href="https://www.tutorialspoint.com/data_structures_algorithms/hash_table_program_in_c.htm" rel="nofollow">Hash Table Program in C</a></li>
-</ul>
-<h2><a id="user-content-learning-objectives" class="anchor" href="https://github.com/Esteban1891/holbertonschool-low_level_programming/tree/master/0x1A-hash_tables#learning-objectives"></a>Learning Objectives</h2>
-<p>At the end of this project, you are expected to be able to explain to anyone,&nbsp;<span>without the help of Google:</span></p>
-<h2><a id="user-content-general" class="anchor" href="https://github.com/Esteban1891/holbertonschool-low_level_programming/tree/master/0x1A-hash_tables#general"></a>General</h2>
-<ul>
-<li>What is a hash function</li>
-<li>What makes a good hash function</li>
-<li>What is a hash table, how do they work and how to use them</li>
-<li>What is a collision and what are the main ways of dealing with collisions in the context of a hash table</li>
-<li>What are the advantages and drawbacks of using hash tables</li>
-<li>What are the most common use cases of hash tables</li>
-</ul>
-<h2><a id="user-content-requirements" class="anchor" href="https://github.com/Esteban1891/holbertonschool-low_level_programming/tree/master/0x1A-hash_tables#requirements"></a>Requirements</h2>
-<h2><a id="user-content-general-1" class="anchor" href="https://github.com/Esteban1891/holbertonschool-low_level_programming/tree/master/0x1A-hash_tables#general-1"></a>General</h2>
-<ul>
-<li>Allowed editors: vi, vim, emacs</li>
-<li>All your files will be compiled on Ubuntu 14.04 LTS</li>
-<li>Your programs and functions will be compiled with gcc 4.8.4 using the flags -Wall -Werror -Wextra and -pedantic</li>
-<li>All your files should end with a new line</li>
-<li>A README.md file, at the root of the folder of the project is mandatory</li>
-<li>Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl</li>
-<li>You are not allowed to use global variables</li>
-<li>No more than 5 functions per file</li>
-<li>You are allowed to use the C standard library</li>
-<li>The prototypes of all your functions should be included in your header file called hash_tables.h</li>
-<li>Don&rsquo;t forget to push your header file</li>
-<li>All your header files should be include guarded</li>
-</ul>
-<p>&nbsp;</p>
-</div>
-</div>
-</div>
-<div id="gtx-trans" style="position: absolute; left: -23px; top: 1167.41px;">&nbsp;</div>
+# C - Hash tables
+
+In this project, I learned about hashing by implementing hash functions
+and hash tables in C.
+
+## Tests :heavy_check_mark:
+
+* [tests](./tests): Folder of test files. Provided by Holberton School.
+
+## Header File :file_folder:
+
+* [hash_tables.h](./hash_tables.h): Header file containing definitions and prototypes for
+all types and functions written for the project.
+
+Data Structures:
+```
+typedef struct hash_node_s
+{
+	char *key;
+	char *value;
+	struct hash_node_s *next;
+} hash_node_t;
+
+typedef struct hash_table_s
+{
+	unsigned long int size;
+	hash_node_t **array;
+} hash_table_t;
+
+typedef struct shash_node_s
+{
+	char *key;
+	char *value;
+	struct shash_node_s *next;
+	struct shash_node_s *sprev;
+	struct shash_node_s *snext;
+} shash_node_t;
+
+typedef struct shash_table_s
+{
+	unsigned long int size;
+	shash_node_t **array;
+	shash_node_t *shead;
+	shash_node_t *stail;
+} shash_table_t;
+```
+
+Function Prototypes:
+
+| File | Prototype |
+| --- | --- |
+| `0-hash_table_create.c` | `hash_table_t *hash_table_create(unsigned long int size);` |
+| `1-djb2.c` | `unsigned long int hash_djb2(const unsigned char *str);` |
+| `2-key_index.c` | `unsigned long int key_index(const unsigned char *key, unsigned long int size);` |
+| `3-hash_table_set.c` | `int hash_table_set(hash_table_t *ht, const char *key, const char *value);` |
+| `4-hash_table_get.c` | `char *hash_table_get(const hash_table_t *ht, const char *key);` |
+| `5-hash_table_print.c` | `void hash_table_print(const hash_table_t *ht);` |
+| `6-hash_table_delete.c` | `void hash_table_delete(hash_table_t *ht);` |
+| `100-sorted_hash_table.c` | `shash_table_t *shash_table_create(unsigned long int size);` |
+| | `int shash_table_set(shash_table_t *ht, const char *key, const char *value);` |
+| | `char *shash_table_get(const shash_table_t *ht, const char *key);` |
+| | `void shash_table_print(const shash_table_t *ht);` |
+| | `void shash_table_print_rev(const shash_table_t *ht);` |
+| | `void shash_table_delete(shash_table_t *ht);` |
+
+## Tasks :page_with_curl:
+
+## 0. >>> ht = {}
+  * [0-hash_table_create.c](./0-hash_table_create.c): C function that creates a `hash_table_t`
+  hash table.
+    * If the function fails - returns `NULL`.
+    * Otherwise - returns a pointer to the new hash table.
+
+## 1. djb2
+  * [1-djb2.c](./1-djb2.c): C function that implements the djb2 hashing algorithm.
+
+## 2. key -> index
+  * [2-key_index.c](./2-key_index.c): C function that returns the index at which a key/value
+  pair should be stored in the array of a `hash_table_t` hash table.
+
+## 3. >>> ht['betty'] = 'holberton'
+  * [3-hash_table_set.c](./3-hash_table_set.c): C function that adds an element to a
+  `hash_table_t` table.
+    * The parameter `key` cannot be an empty string.
+    * Returns `1` on success, `0` otherwise.
+
+## 4. >>> ht['betty']
+  * [4-hash_table_get.c](./4-hash_table_get.c): C function that retrieves a value associated
+  with a key in a `hash_table_t` hash table.
+    * If `key` cannot be matched - returns `NULL`.
+    * Otherwise - returns the value associated with `key`.
+
+## 5. >>> print(ht)
+  * [5-hash_table_print.c](./5-hash_table_print.c): C function that prints a `hash_table_t`
+  hash table.
+    * Prints each `key`/`value` pair in the order they appear in the array of the hash table.
+    * Does not print anything if the hash table is `NULL`.
+
+## 6. >>> del ht
+  * [6-hash_table_delete.c](./6-hasb_table_delete.c): C function that deletes a
+  `hash_table_t` hash table.
+
+## 7. $ht['Betty'] = 'Holberton'
+  * [100-sorted_hash_table.c](./100-sorted_hash_table.c): C functions that define a sorted
+  hash table `shash_table_t`.
+    * Identical in function to a `hash_table_t` hash table except key/value
+    pairs are inserted in alphabetical order according to the ASCII value of the key.
+    * Key/value pairs are printed in the order they are sorted.
+    * Includes a function `shash_table_print_rev()` that prints the hash table
+    in reverse order.
+
+## Authors :black_nib:
+
+- [Esteban De La Hoz](https://www.linkedin.com/in/esteban-de-la-hoz-romero-b6270017b/) | [Twitter](https://twitter.com/Esteban18911) | [GitHub](https://github.com/Esteban18911)

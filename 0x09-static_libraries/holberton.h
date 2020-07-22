@@ -3,7 +3,7 @@
 
 /*
  * File: holberton.h
- * Auth: Brennan D Baraban
+ * Auth: Esteban De La Hoz
  * Desc: Header file containing the prototypes of all functions
  *       included in the static library libholberton.a.
  */

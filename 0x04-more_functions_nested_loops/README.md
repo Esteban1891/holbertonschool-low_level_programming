@@ -1,26 +1,87 @@
-0-isupper.c - function that checks for uppercase character.
+# C - Pointers, arrays and strings
 
-1-isdigit.c - function that checks for a digit (0 through 9).
+In this project, I learned about what and how to use pointers and arrays and
+the differences between the two as well as how to use and manipulate strings in C.
 
-2-mul.c - function that multiplies two integers.
+## Tests :heavy_check_mark:
 
-3-print_numbers.c - function that prints the numbers, from 0 to 9, followed by a new line.
+* [tests](./tests): Folder of test files. Provided by Holberton School.
 
-4-print_most_numbers.c - function that prints the numbers, from 0 to 9, except 2 and 4, followed by a new line.
+## Helper File :raised_hands:
 
-5-more_numbers.c - function that prints the numbers, from 0 to 14, followed by a new line 10 times.
+* [_putchar.c](./_putchar.c): C function that writes a character to `stdout`.
 
-6-print_line.c - function that draws a straight line of length n in the terminal, followed by a new line.
+## Header File :file_folder:
 
-7-print_diagonal.c - function that draws a diagonal line of length n in the terminal.
+* [holberton.h](holberton.h): Header file containing prototypes for all functions written in the project.
 
-8-print_square.c - function that prints a square of size n, followed by a new line.
+| File              | Prototype                               |
+| ----------------- | --------------------------------------- |
+| `0-reset_to_98.c` | `void reset_to_98(int *n);`             |
+| `1-swap.c`        | `void swap_int(int *a, int *b);`        |
+| `2-strlen.c`      | `int _strlen(char *s);`                 |
+| `3-puts.c`        | `void _puts(char *str);`                |
+| `4-print_rev.c`   | `void print_rev(char *s);`              |
+| `5-rev_string.c`  | `void rev_string(char *s);`             |
+| `6-puts2.c`       | `void puts2(char *str);`                |
+| `7-puts_half.c`   | `void puts_half(char *str);`            |
+| `8-print_array.c` | `void print_array(int *a, int n);`      |
+| `9-strcpy.c`      | `char *_strcpy(char *dest, char *src);` |
+| `100-atoi.c`      | `int _atoi(char *s);`                   |
 
-9-fizz_buzz.c - prints the numbers from 1 to 100, separated by a space, followed by a new line. For multiples of three print Fizz instead of the number. For the multiples of five print Buzz. For numbers which are multiples of both three and five print FizzBuzz.
+## Tasks :page_with_curl:
 
-10-print_triangle.c - function that prints a triangle of size n, followed by a new line.
+## 0. 98 Battery st.
+  * [0-reset_to_98.c](./0-reset_to_98.c): C function that takes a pointer to an
+  `int` as a parameter and updates the value it points to to `98`.
 
-Advanced
-100-prime_factor.c - finds and prints the largest prime factor of the number 612852475143, followed by a new line.
+## 1. Don't swap horses in crossing a stream
+  * [1-swap.c](./1-swap.c): C function that swaps the value of two integers.
 
-101-print_number.c - function that prints an integer.
+## 2. This report, by its very length, defends itself against the risk of being read
+  * [2-strlen.c](./2-strlen.c): C function that returns the length of a string.
+
+## 3. I do not fear computers. I fear the lack of them
+  * [3-puts.c](./3-puts.c): C function that prints a string, followed by a new line,
+  to `stdout`.
+
+## 4. I can only go one way. I've not got a reverse gear
+  * [4-print_rev.c](./4-print_rev.c): C function that prints a string, in reverse,
+  followed by a new line.
+
+## 5. A good engineer thinks in reverse and asks himself about the stylistic consequences of the components and systems he proposes
+  * [5-rev_string.c](./5-rev_string.c): C function that reverses a string.
+
+## 6. Half the lies they tell about me aren't true
+  * [6-puts2.c](./6-puts2.c): C function that prints every other character of a string,
+  followed by a new line.
+
+## 7. Winning is only half of it. Having fun is the other half
+  * [7-puts_half.c](./7-puts_half.c): C function that prints the second half of a string,
+  followed by a new line.
+
+## 8. Arrays are not pointers
+  * [8-print_array.c](./8-print_array.c): C function that prints an input `n` elements
+  of an array of integers, followed by a new line.
+    * Numbers are separated by a comma followed by a space.
+    * Numbers are displayed in the same order as they are stored in the array.
+
+## 9. strcpy
+  * [9-strcpy.c](./9-strcpy.c): C function that copies the string pointed to by
+  `src`, including the terminating null byte (`\0`), to the buffer pointed to by `dest`.
+    * Returns the pointer to `dest`.
+
+## 10. Great leaders are willing to sacrifice the numbers to save the people. Poor leaders sacrifice the people to save the numbers
+  * [100-atoi.c](./100-atoi.c): C function that converts a string to an integer
+  without using `long`, new variable arrays, or hard-coded special values, as follows:
+    * The number in the string can be preceded by an infinite number of characters.
+    * Takes into account all `+` and `-` signs before the number.
+    * If there are no numbers in the string, the function returns `0`.
+
+## 11. Don't hate the hacker, hate the code
+  * [101-keygen.c](./101-keygen.c): C program that generates random valid passwords
+  for the program [101-crackme](https://github.com/holbertonschool/0x04.c).
+  
+  ## Authors :black_nib:
+
+- [Esteban De La Hoz](https://www.linkedin.com/in/esteban-de-la-hoz-romero-b6270017b/) | [Twitter](https://twitter.com/Esteban18911) | [GitHub](https://github.com/Esteban18911)

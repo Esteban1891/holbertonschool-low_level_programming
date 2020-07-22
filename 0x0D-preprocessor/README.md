@@ -1,15 +1,34 @@
-<p1>0x0D. C - Preprocessor</p1>
+# C - Preprocessor
 
-0. Object-like Macro = Create a header file that defines a macro named SIZE as an abbreviation for the token 1024.
+In this project, I learned about common predefined macros in C while
+practicing implementing my own and include-guarding header files.
 
-1. Pi = Create a header file that defines a macro named PI as an abbreviation for the token 3.14159265359.
+## Tests :heavy_check_mark:
 
-2. File name = 	Write a program that prints the name of the file it was compiled from, followed by a new line.
+* [tests](./tests): Folder of test files. Provided by Holberton School.
 
-3. Function-like macro = Write a function-like macro ABS(x) that computes the absolute value of a number x.
+## Tasks :page_with_curl:
 
-4. SUM = Write a function-like macro SUM(x, y) that computes the sum of the numbers x and y.
+## 0. Object-like Macro
+  * [0-object_like_macro.h](./0-object_like_macro.h): Header file that defines a
+  macro named `SIZE` as an abbreviation for the token `1024`.
 
-5. Worst abuse of the C preprocessor (IOCCC winner, 1986) = Compile this program, written by Jim Hague (UK), and feed ascii text into standard input.
+## 1. Pi
+  * [1-pi.h](./1-pi.h): Header file that defines a macro named `PI` as an abbreviation
+  for the token `3.14159265359`.
 
-6. Fun with the preprocessor = Write a program that can print Hello, Holberton, followed by a new line.
+## 2. File name
+  * [2-main.c](./2-main.c): C program that prints the name of the file it was
+  compiled from followed by a new line.
+
+## 3. Function-like macro
+  * [3-function_like_macro.h](./3-function_like_macro.h): Header file that defines a
+  function-like macro `ABS(x)` that computes the absolute value of a number `x`.
+
+## 4. SUM
+  * [4-sum.h](./4-sum.h): Header file that defines a function-like macro `SUM(x, y)`
+  that computes the sum of the numbers `x` and `y`.
+  
+  ## Authors :black_nib:
+
+- [Esteban De La Hoz](https://www.linkedin.com/in/esteban-de-la-hoz-romero-b6270017b/) | [Twitter](https://twitter.com/Esteban18911) | [GitHub](https://github.com/Esteban18911)

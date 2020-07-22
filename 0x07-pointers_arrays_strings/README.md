@@ -1,6 +1,8 @@
-# C - Recursion
+# C - Even more pointers, arrays and strings
 
-In this project, I learned about recursion in C.
+In this project, I learned about what and how to use pointers to pointers
+and multidimensional arrays in C as well as the most common C standard library
+functions to manipulate strings.
 
 ## Tests :heavy_check_mark:
 
@@ -12,70 +14,69 @@ In this project, I learned about recursion in C.
 
 ## Header File :file_folder:
 
-* [holberton.h](./holberton.h): Header file containing prototypes for all
-functions written in the project.
+* [holberton.h](./holberton.h): Header file containing prototypes for all functions written
+in the project.
 
-| File                      | Prototype                             |
-| ------------------------- | ------------------------------------- |
-| `0-puts_recursion.c`      | `void _puts_recursion(char *s);`      |
-| `1-print_rev_recursion.c` | `void _print_rev_recursion(char *s);` |
-| `2-strlen_recursion.c`    | `int _strlen_recursion(char *s);`     |
-| `3-factorial.c`           | `int factorial(int n);`               |
-| `4-pow_recursion.c`       | `int _pow_recursion(int x, int y);`   |
-| `5-sqrt_recursion.c`      | `int _sqrt_recursion(int n);`         |
-| `6-is_prime_number.c`     | `int is_prime_number(int n);`         |
-| `7-is_palindrome.c`       | `int is_palindrome(char *s);`         |
-| `100-wildcmp.c`           | `int wildcmp(char *s1, char *s2);`    |
+| File         | Prototype                                               |
+| ------------ | ------------------------------------------------------- |
+| `0-memset.c` | `char *_memset(char *s, char b, unsigned int n);`       |
+| `1-memcpy.c` | `char *_memcpy(char *dest, char *src, unsigned int n);` |
+| `2-strchr.c` | `char *_strchr(char *s, char c);`                       |
+| `3-strspn.c` | `unsigned int _strspn(char *s, char *accept);`          |
+| `4-strpbrk.c` | `char *_strpbrk(char *s, char *accept);`               |
+| `5-strstr.c` | `char *_strstr(char *haystack, char *needle);`          |
+| `7-print_chessboard.c` | `void print_chessboard(char (*a)[8]);`        |
+| `8-print_diagsums.c` | `void print_diagsums(int *a, int size);`        |
+| `9-set_string.c` | `void set_string(char **s, char *to);`              |
 
 ## Tasks :page_with_curl:
 
-## 0. She locked away a secret, deep inside herself, something she once knew to be true... but chose to forget
-  * [0-puts_recursion.c](./0-puts_recursion.c): C function that prints a string,
-  followed by a new line.
+## 0. memset
+  * [0-memset.c](./0-memset.c): C function that fills the first `n` bytes of
+  memory area pointed to by `s` with the constant byte `b`.
+    * Returns a pointer to the filled memory area `s`.
 
-## 1. Why is it so important to dream? Because, in my dreams we are together
-  * [1-print_rev_recursion.c](./1-print_rev_recursion.c): C function that prints
-  a string in reverse.
+## 1. memcpy
+  * [1-memcpy.c](./1-memcpy.c): C function that copies `n` bytes from memory
+  area `src` to memory area `dest`.
+    * Returns a pointer to the memory area `dest`.
 
-## 2. Dreams feel real while we're in them. It's only when we wake up that we realize something was actually strange
-  * [2-strlen_recursion.c](./2-strlen_recursion.c): C function that returns the
-  length of a string.
+## 2. strchr
+  * [2-strchr.c](./2-strchr.c): C function that returns a pointer to the first occurence of
+  the character `c` in the string `s`.
+    * If the character is not found, the function returns `NULL`.
 
-## 3. You mustn't be afraid to dream a little bigger, darling
-  * [3-factorial.c](./3-factorial.c): C function that returns the factorial of
-  a given number.
+## 3. strspn
+  * [3-strspn.c](./3-strspn.c): C function that returns the number of bytes in the intitial
+  segment of memory area `s` which consist only of bytes from a substring `accept`.
 
-## 4. Once an idea has taken hold of the brain it's almost impossible to eradicate
-  * [4-pow_recursion.c](./4-pow_recursion.c): C function that returns the value of
-  a number `x` raised to the value of an input `y`.
-    * If `y` is less than `0`, the function returns `-1`.
+## 4. strpbrk
+  * [4-strpbrk.c](./4-strpbrk.c): C function that locates the first occurence in a
+  string `s` of any of the bytes in a string `accept`.
+    * Returns a pointer to the byte in `s` that matches one of the bytes in `accept`.
+    * If no matching byte is found, the function returns `NULL`.
 
-## 5. Your subconscious is looking for the dreamer
-  * [5-sqrt_recursion.c](./5-sqrt_recursion.c): C function that returns the natural square
-  root of a number.
-    * If the number does not have a natural square root, the function returns `-1`.
+## 5. strstr
+  * [5-strstr.c](./5-strstr.c): C function that finds the first occurence of a
+  substring `needle` in a string `haystack`.
+    * The terminating null bytes (`\0`) are not compared.
+    * Returns a pointer to the beginning of the located substring.
+    * If the substring is not found, the function returns `NULL`.
 
-## 6. Inception. Is it possible?
-  * [6-is_prime_number.c](./6-is_prime_number.c): C function that checks in an
-  integer is a prime number.
-    * If the integer is prime, the function returns `1`.
-    * Otherwise, the function returns `0`.
+## 6. Chess is mental torture
+  * [7-print_chessboard.c](./7-print_chessboard.c): C function that prints the chessboard.
 
-## 7. They say we only use a fraction of our brain's true potential. Now that's when we're awake. When we're asleep, we can do almost anything
-  * [7-is_palindrome.c](./7-is_palindrome.c): C function that checks if a string is
-  a palindrome.
-    * If the string is a palindrome, the function returns `1`.
-    * Otherwise, the function returns `0`.
+## 7. The line of life is a ragged diagonal between duty and desire
+  * [8-print_diagsums.c](./8-print_diagsums.c): C function that prints the sum of the two
+  diagonals of a square matrix of integers.
 
-## 8. Inception. Now, before you bother telling me it's impossible...
-  * [100-wildcmp.c](./100-wildcmp.c): C function that compares two strings
-  `s1` and `s2`.
-    * `s2` can contain the special character `*`.
-    * If the strings can be considered identical, the function returns `1`.
-    * Otherwise, the function returns `0`.
-    
-    
-    
+## 8. Double pointer, double fun
+  * [9-set_string.c](./9-set_string.c): C function that sets the value of a pointer to a char.
+
+## 9. My primary goal of hacking was the intellectual curiosity, the seduction of adventure
+  * [101-crackme_password](./101-crackme_password): File containing the password for
+  the [crackme2](https://github.com/holbertonschool/0x06.c) executable.
+
 ## Authors :black_nib:
 
 - [Esteban De La Hoz](https://www.linkedin.com/in/esteban-de-la-hoz-romero-b6270017b/) | [Twitter](https://twitter.com/Esteban18911) | [GitHub](https://github.com/Esteban18911)
